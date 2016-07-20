@@ -79,8 +79,8 @@ BRUSHED.slider = function(){
 		slides 					:  	[			// Slideshow Images
 											{image : '_include/img/slider-images/image01.jpg', title : '<div class="slide-content">#SomosFacat</div>', thumb : '', url : ''},
 											{image : '_include/img/slider-images/image02.jpg', title : '<div class="slide-content">#SomosAnalisis</div>', thumb : '', url : ''},
-											{image : '_include/img/slider-images/image03.jpg', title : '<div class="slide-content">#SomosDiseño</div>', thumb : '', url : ''},
-											{image : '_include/img/slider-images/image04.jpg', title : '<div class="slide-content">#SomosModa</div>', thumb : '', url : ''}  
+											{image : '_include/img/slider-images/image03.jpg', title : '<div class="slide-content">#SomosGrafico</div>', thumb : '', url : ''},
+											{image : '_include/img/slider-images/image04.jpg', title : '<div class="slide-content">#SomosModas</div>', thumb : '', url : ''}  
 									],
 									
 		// Theme Options			   
