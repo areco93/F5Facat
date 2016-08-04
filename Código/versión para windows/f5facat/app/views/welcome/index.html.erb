@@ -1,0 +1,62 @@
+<div class="container-fluid">
+	<div class="row">
+		<div id="carousel" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#carousel" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel" data-slide-to="1"></li>
+				<li data-target="#carousel" data-slide-to="2"></li>
+				<li data-target="#carousel" data-slide-to="3"></li>
+			</ol>
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<%= image_tag "image01.jpg", :alt => "image01", :title => "image01"%>
+					<div class="container">
+						<div class="carousel-caption">
+							<h1>Somos Facat</h1>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<%= image_tag "image02.jpg", :alt => "image02", :title => "image02"%>
+					<div class="container">
+						<div class="carousel-caption">
+							<h1>Somos Análisis de Sistemas</h1>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<%= image_tag "image03.jpg", :alt => "image03", :title => "image03"%>
+					<div class="container">
+						<div class="carousel-caption">
+							<h1>Somos Diseño Gráfico</h1>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<%= image_tag "image04.jpg", :alt => "image04", :title => "image04"%>
+					<div class="container">
+						<div class="carousel-caption">
+							<h1>Somos Diseño de Modas</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Controls -->
+			<a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+		<% if user_signed_in? %>
+		<h1>Bienvenido <%= current_user.email %> </h1>
+		<% end %>
+	</div>
+</div>

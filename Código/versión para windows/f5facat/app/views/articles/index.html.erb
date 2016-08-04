@@ -1,0 +1,22 @@
+<strong><h1 style="color: blue">Lista de artículos</h1></strong>
+<hr>
+<%= link_to 'Nuevo artículo', new_article_path %>
+<br>
+<table>
+  <% @articles.each do |article| %>
+  <tr>
+    <td><h2><strong><%= link_to article.title, article %></h2></strong></td>
+  </tr>
+  <% unless article.user.nil? %>
+  <tr>
+    <td>Escrito por: <%= article.user.email %></td>
+  </tr>
+  <% end %>  
+  <tr>
+    <td><h4><%= article.body %></h4></td>
+  </tr>
+  <tr>
+    <td><%= link_to "Mostrar", article_path(article) %> | <%= link_to "Editar", edit_article_path(article) %> | <%= link_to "Eliminar", article, method: :delete %></td>
+  </tr>
+  <% end %>
+</table>
