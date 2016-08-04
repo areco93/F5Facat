@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <style type="text/css">
+    html{
+  background: url("http://imagenesparafondodepantalladecelular.com/wp-content/uploads/2016/04/fondos-de-pantalla-azul-degrado.jpg") no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+  </style>
     <title>F5facat</title>
     <%= csrf_meta_tags %>
 
@@ -11,6 +21,6 @@
   <body>
 	<%= yield %>
     <p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
+	<b><p class="alert"><%= alert %></p></b>
   </body>
 </html>

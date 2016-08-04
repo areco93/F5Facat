@@ -15,9 +15,9 @@ ActiveRecord::Schema.define(version: 20160803033234) do
   create_table "articles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.text     "body",         limit: 65535
-    t.integer  "visits_count",               default: 0
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
+    t.integer  "visits_count"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.integer  "user_id"
     t.index ["user_id"], name: "index_articles_on_user_id", using: :btree
   end
