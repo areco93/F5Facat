@@ -12,13 +12,21 @@
 	Visitas: <%= @article.visits_count %>
 </p>
 
-<div>
-	<h3>Comentarios</h3>
-	<%= render "comments/form" %>
-<div>
-
 <p>
 	<h4><%= @article.body %></h4>
 </p>
+
+<div>
+	<h3>Comentarios</h3>
+	<%= render "comments/form" %>
+	<ul>
+		<% @article.comments.each do |comment| %>
+			<li>
+				<%= comment.body %> - <%= comment.user.email %>
+			</li>
+		<% end %>
+	</ul>
+<div>
+
 <br>
 <%= link_to 'Back', articles_path %> | <%= link_to 'Edit', edit_article_path(@article) %>
