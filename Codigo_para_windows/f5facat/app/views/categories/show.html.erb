@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+<h1 style="color:<%= @category.color %>;"><strong><%= @category.name %></strong></h1>
+
+<h2><strong>Artículos</strong></h2>
+<% @category.articles.each do |article| %>
+	<table>
+		<tr>
+			<td><h2><%= link_to article.title, article %></h2></td>
+		</tr>  
+		<tr>
+			<td><h4><%= article.body %></h4></td>
+		</tr>
+		<tr>
+			<td><%= link_to "Eliminar", article, method: :delete %></td>
+		</tr>
+	</table>
+<% end %>
+
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>
