@@ -52,3 +52,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Devise
 gem 'devise'
+
+# Aasm
+gem 'aasm'
+
+# Will_paginate
+gem 'will_paginate'

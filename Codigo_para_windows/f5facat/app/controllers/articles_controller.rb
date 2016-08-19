@@ -2,10 +2,12 @@ class ArticlesController < ApplicationController
 
 	before_action :authenticate_user!, except: [:show,:index]
 	before_action :set_article, except: [:index,:new,:create]
+	before_action :authenticate_editor!, only: [:new,:create,:edit]
+	before_action :authenticate_admin!, only: [:destroy,:publish]
 
 	#GET /articles 
 	def index
-		@articles = Article.all
+		@articles = Article.paginate(page: params[:page],per_page:5).publicados
 	end
 
 	#GET /articles/new
@@ -42,6 +44,11 @@ class ArticlesController < ApplicationController
   		else
     		render 'edit'
   		end
+	end
+
+	def publish
+		@article.publish!
+		redirect_to @article
 	end
 
 	def destroy
