@@ -1,0 +1,31 @@
+Lista de cosas que faltan
+ing de software
+
+- metodo de recolectar datos (observacion)
+agregar al power y el doc
+
+- hacer mockups del sistema
+poner en doc y power
+
+- Se define la metodología a utilizar, poner en power y documento
+
+- se define las herramientas colaborativas a utilizar.. poner en power y doc
+
+
+
+
+ahora sobre los diagramas
+
+- justificar la realizacion de diagramas
+
+- diagramas de estado
+- clases
+-paquetes
+- interaccion
+-secuencia
+-comunicacion
+-actividad
+
+
+
+ 
